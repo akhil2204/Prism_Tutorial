@@ -1,0 +1,26 @@
+title: Passenger
+type: object
+properties:
+  firstName:
+    type: string
+    pattern: '^[A-Z][a-z]+$'
+  lastName:
+    type: string
+    pattern: '^[A-Z][a-z]+$'
+  passportNumber:
+    type: number
+    minimum: 1
+    maximum: 9
+  dateOfBirth:
+    type: string
+    format: date
+required:
+  - firstName
+  - lastName
+  - passportNumber
+x-examples:
+  example-1:
+    firstName: string
+    lastName: string
+    passportNumber: 1
+    dateOfBirth: '2019-08-24'
